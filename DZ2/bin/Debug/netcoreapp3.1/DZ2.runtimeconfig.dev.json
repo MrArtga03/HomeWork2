@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Smuzi\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Smuzi\\.nuget\\packages"
+    ]
+  }
+}
