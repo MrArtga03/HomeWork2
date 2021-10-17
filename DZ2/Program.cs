@@ -6,128 +6,75 @@ namespace DZ2
     {
         static void Main(string[] args)
         {
-            Student student = new Student("Артём", "3-1П9");
-            student.GetNameOfPerson();
-            student.GetOrientation();
-            student.Prava();
+            Person student = new Student("Галкин Артём Дмитриевич", "из группы 3-1П9", "подать заявление на отчисление");
+            student.ShowName();
+            student.ShowOrientation();
+            student.ShowOccupation();
 
-            Console.WriteLine("-----");
+            Console.WriteLine("----");
 
-            Teacher teacher = new Teacher("Юлька", "Учитель по матеше");
-            teacher.GetNameOfPerson();
-            teacher.GetOrientation();
-            teacher.Prava();
+            Person teacher = new Teacher("Саша спилберг", "Учитель", "преподавать");
+            teacher.ShowName();
+            teacher.ShowOrientation();
+            teacher.ShowOccupation();
 
-            Console.WriteLine("-----");
+            Console.WriteLine("----");
 
-            Kadrovik kadrovik = new Kadrovik("Вася", "Кадровик");
-            kadrovik.GetNameOfPerson();
-            kadrovik.GetOrientation();
-            kadrovik.CreateNewPerson("Сишарповин", "Василий", "Джавович", 18, "3-1П9");
-            kadrovik.CreateNewPerson("Гелийвин", "Евгений", "Уранович", "Химия");
+            Person kadrovik = new Kadrovik("Зашибалкин Василий Петрович", "Кадровик", "создавать студентов и учителей");
+            kadrovik.ShowName();
+            kadrovik.ShowOrientation();
+            kadrovik.ShowOccupation();
         }
     }
 }
 
-interface IGetPerson
-{
-    string Name { get; set; }        //Имя чел
-    string Orientation { get; set; } //Должность чел
-    void GetNameOfPerson();          //Выводит имя чел
-    void GetOrientation();           //Выводит должность чел
-}
 
 interface IRabota
 {
-    void Prava(); //Что может чк
+    string Orientation { get; set; } //Должность
+    string Occupation { get; set; }  //Род деятельности каждой из сущностей
+    void ShowOrientation();          //Сообщить должность
+    void ShowOccupation();           //Сообщить род деятельности
 }
 
-//Студент
-class Student : IGetPerson, IRabota
+abstract class Person : IRabota
 {
-    public string Name { get; set; }
+    public string Name { get; set; } //ФИО
     public string Orientation { get; set; }
+    public string Occupation { get; set; }
 
-    public Student(string name, string orientation)
+    public Person(string name, string orientation, string occupation)
     {
         Name = name;
         Orientation = orientation;
+        Occupation = occupation;
     }
 
-    public void GetNameOfPerson()
+    public void ShowName()
     {
-        Console.WriteLine($"Меня звать - {Name}");
+        Console.Write($"Меня звать {Name}. ");
     }
 
-    public void GetOrientation()
+    public virtual void ShowOrientation()
     {
-        Console.WriteLine($"Я из группы {Orientation}");
+        Console.WriteLine($"Я {Orientation}");
     }
 
-    public void Prava()
+    public virtual void ShowOccupation()
     {
-        Console.WriteLine("'Отчисление' Кто куда, а я в автотрах!");
+        Console.WriteLine($"Я могу {Occupation}");
     }
 }
 
-//Учитель
-class Teacher : IGetPerson, IRabota
+class Student : Person
 {
-    public string Name { get; set; }
-    public string Orientation { get; set; }
-
-    public Teacher(string name, string orientation)
-    {
-        Name = name;
-        Orientation = orientation;
-    }
-
-    public void GetNameOfPerson()
-    {
-        Console.WriteLine($"Я ваш новый препод по матеше - {Name}");
-    }
-
-    public void GetOrientation()
-    {
-        Console.WriteLine($"Моя должность - {Orientation}");
-    }
-
-    public void Prava()
-    {
-        Console.WriteLine("Начинаем лекцию. Записываем новую тему...");
-    }
+    public Student(string name, string orientation, string occupation) : base(name, orientation, occupation) { }
 }
-
-//Кадровик
-class Kadrovik : IGetPerson
+class Teacher : Person
 {
-    public string Name { get; set; }
-    public string Orientation { get; set; }
-
-    public Kadrovik(string name, string orientation)
-    {
-        Name = name;
-        Orientation = orientation;
-    }
-
-    public void GetNameOfPerson()
-    {
-        Console.Write($"Я - {Name}. ");
-    }
-
-    public void GetOrientation()
-    {
-        Console.WriteLine($"Я - {Orientation}");
-    }
-
-    //Создание студентов и учителей
-    public void CreateNewPerson(string Name, string LastName, string Patronymic, int age, string group)
-    {
-        Console.WriteLine($"Шалом группа {group}, у нас новый спиногрыз - {Name} {LastName} {Patronymic}, ему {age} лет");
-    }
-
-    public void CreateNewPerson(string Name, string LastName, string Patronymic, string doljnost)
-    {
-        Console.WriteLine($"Коллеги, у вас появилась свежая кровь - {Name} {LastName} {Patronymic}. Будет вести {doljnost}");
-    }
-} 
+    public Teacher(string name, string orientation, string occupation) : base(name, orientation, occupation) { }
+}
+class Kadrovik : Person
+{
+    public Kadrovik(string name, string orientation, string occupation) : base(name, orientation, occupation) { }
+}
