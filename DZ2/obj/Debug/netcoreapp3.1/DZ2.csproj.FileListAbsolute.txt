@@ -4,10 +4,11 @@ C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 К�
 C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\bin\Debug\netcoreapp3.1\DZ2.runtimeconfig.dev.json
 C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\bin\Debug\netcoreapp3.1\DZ2.dll
 C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\bin\Debug\netcoreapp3.1\DZ2.pdb
-C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\obj\Debug\netcoreapp3.1\DZ2.csprojAssemblyReference.cache
 C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\obj\Debug\netcoreapp3.1\DZ2.AssemblyInfoInputs.cache
 C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\obj\Debug\netcoreapp3.1\DZ2.AssemblyInfo.cs
 C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\obj\Debug\netcoreapp3.1\DZ2.csproj.CoreCompileInputs.cache
 C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\obj\Debug\netcoreapp3.1\DZ2.dll
 C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\obj\Debug\netcoreapp3.1\DZ2.pdb
 C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\obj\Debug\netcoreapp3.1\DZ2.genruntimeconfig.cache
+C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\obj\Debug\netcoreapp3.1\DZ2.csproj.AssemblyReference.cache
+C:\Users\Smuzi\OneDrive\Рабочий стол\Работы КПК\РПМ 3 КУРС\RPM2\DZ2\DZ2\obj\Debug\netcoreapp3.1\DZ2.GeneratedMSBuildEditorConfig.editorconfig
